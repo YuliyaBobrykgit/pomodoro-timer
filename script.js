@@ -17,7 +17,7 @@ function createTimerContainer() {
 
     function setTimer() {
         timerId = setInterval(() => {
-            let [mm, ss] = pomodoroTime.textContent.split(':').map(Number); // пересмотреть синтаксис и разобраться
+            let [mm, ss] = pomodoroTime.textContent.split(':').map(Number); 
 
             if (ss > 0) {
                 ss--;
@@ -54,13 +54,13 @@ function createTimerContainer() {
     }); 
 
     pomodoroBtn.addEventListener('click', function() {
-        pomodoroTime.textContent = '00:09';
+        pomodoroTime.textContent = '25:00';
         initialTime = pomodoroTime.textContent;
         changeBtn('stop');
     })
 
     breakBtn.addEventListener('click', function() {
-        pomodoroTime.textContent = '00:05';
+        pomodoroTime.textContent = '05:00';
         initialTime = pomodoroTime.textContent;
         changeBtn('stop');
     })
