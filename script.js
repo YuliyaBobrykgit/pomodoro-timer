@@ -57,12 +57,16 @@ function createTimerContainer() {
         pomodoroTime.textContent = '25:00';
         initialTime = pomodoroTime.textContent;
         changeBtn('stop');
+        pomodoroBtn.classList.add('active');
+        breakBtn.classList.remove('active');
     })
 
     breakBtn.addEventListener('click', function() {
         pomodoroTime.textContent = '05:00';
         initialTime = pomodoroTime.textContent;
         changeBtn('stop');
+        pomodoroBtn.classList.remove('active');
+        breakBtn.classList.add('active');
     })
 
     resetBtn.addEventListener('click', function() {
